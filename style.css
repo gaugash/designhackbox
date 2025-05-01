@@ -127,10 +127,14 @@ body {
       width: 100%;
       max-width: 360px;
     }
-    
+
     .footer-spacer {
         margin: 1050px 0 0 0;
     }
+
+    html, body {
+        overflow-x: hidden;
+      }
   }
 
  .logofut {
