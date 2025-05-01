@@ -123,17 +123,6 @@ body {
   .answer-card:hover {
     transform: scale(1.05);
   }
-  
-  @media (max-width: 768px) {
-    .answers {
-      flex-direction: column;
-      align-items: center;
-    }
-  
-    .answer-card {
-      width: 100%;
-    }
-  }
 
   .result-screen {
     max-width: 600px;
@@ -187,3 +176,78 @@ body {
     width: 0%;
     transition: width 0.3s ease;
   }
+
+@media (max-width: 768px) {
+  body {
+    padding: 0;
+    overflow-x: hidden;
+    background-size: cover;
+    background-position: center;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    width: 90%;
+  }
+
+  .page-content {
+    padding: 60px 0 0 0;
+  }
+
+  .question-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+
+  .answers {
+    flex-direction: column;
+    gap: 12px;
+    align-items: stretch;
+  }
+
+  .answer-card {
+    width: 100%;
+    font-size: 16px;
+    padding: 16px;
+  }
+
+  .result-title {
+    font-size: 22px;
+  }
+
+  .result-description {
+    font-size: 16px;
+  }
+
+  .result-image {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  button.start-test,
+  .share-button {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  footer {
+    font-size: 12px;
+    bottom: 20px;
+  }
+
+  .progress-container {
+    margin-top: 30px;
+    margin-bottom: 16px;
+  }
+}
