@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Создай мокап</title>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Анимированный фон -->
+  <canvas id="animated-bg"></canvas>
+
+  <!-- Основной контейнер -->
+  <div class="container">
+    <h1>Создай мокап</h1>
+
+    <!-- Переключение устройств -->
+    <div class="device-toggle">
+      <button class="toggle active" data-device="iphone">Айфон</button>
+      <button class="toggle" data-device="macbook">Макбук</button>
+      <button class="toggle" data-device="imac">Аймак</button>
+    </div>
+
+    <!-- Загрузка файла -->
+    <div class="upload-box" id="dropArea">
+      <div class="upload-area">
+        <p>Перетащи файл или</p>
+        <button type="button" class="upload-btn" id="manualUploadBtn">
+          Загрузите файл
+        </button>
+        <p id="fileStatus" class="file-status"></p>
+      </div>
+      <input type="file" id="fileInput" hidden />
+    </div>
+
+    <!-- Кнопка генерации -->
+    <button class="create-button">Создать мокап</button>
+
+    <!-- Результат -->
+    <div class="mockup-preview" id="mockupPreview" style="display: none;">
+      <img
+        id="mockupImage"
+        style="display: none; margin: 40px auto 0 auto; max-width: 100%; height: auto;"
+      />
+    </div>
+  </div>
+
+  <!-- Скрипты -->
+  <script src="background.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
