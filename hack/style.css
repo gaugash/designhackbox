@@ -1,0 +1,126 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+    background-color: #394257;
+    color: white;
+    text-align: center;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+  }
+  
+  h1 {
+    font-size: 48px;
+    margin-bottom: 50px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+  
+  .tab {
+    padding: 10px 20px;
+    border-radius: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #293040;
+    border: none;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .tab.active {
+    border: 1px solid white;
+    color: #ffffff;
+  }
+  
+  .generate-btn {
+    background-color: white;
+    color: #394257;
+    font-weight: 700;
+    font-size: 20px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0px;
+  }
+  
+  .result-box {
+    border: 1px solid rgba(255, 255, 255, 0.323);
+    border-radius: 20px;
+    padding: 30px;
+    max-width: 700px;
+    margin: -25px auto;
+  }
+  
+  #result {
+    font-size: 22px;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 600px) {
+    h1 {
+      font-size: 32px;
+    }
+  
+    .tab {
+      font-size: 14px;
+      padding: 8px 16px;
+    }
+  
+    .generate-btn {
+      font-size: 16px;
+      padding: 12px 24px;
+    }
+  
+    .result-box {
+      padding: 20px;
+    }
+  }
+
+  .headline {
+    font-size: 48px;
+    font-weight: 700;
+    position: relative;
+  }
+  
+  .hover-word {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    border-bottom: 2px solid currentColor; /* Цвет линии как у текста */
+    display: inline-block;
+  }
+  
+  .hover-image {
+    position: absolute;
+    top: 50%; /* под словом */
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    width: 200px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    z-index: 10;
+    border-radius: 12px;
+  }
+  
+  .hover-word:hover .hover-image {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
